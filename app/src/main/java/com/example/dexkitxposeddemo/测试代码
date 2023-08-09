@@ -1,0 +1,31 @@
+package com.example.cvc;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Context;
+import android.os.Bundle;
+import android.util.Log;
+import android.widget.Toast;
+
+public class MainActivity extends AppCompatActivity {
+    public static Context sapp=null;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        if(sapp==null){
+            sapp = this;
+        }
+        cvc();
+    }
+    public boolean cvc() {
+        boolean b = false;
+        Toast.makeText(sapp.getApplicationContext(), "in cvc method1234", Toast.LENGTH_SHORT).show();
+//        String s1="SSSS";
+//        String s2 = "Check123";
+        String s = "SSSS"+"Check123";
+        Log.d(s, "userInfo: xxxx");
+        return b;
+    }
+}
